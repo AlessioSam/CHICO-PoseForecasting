@@ -20,5 +20,5 @@ We test SeS-GCN on CHICO for two important perception tasks in robotics: human p
 
 
 <h3 align="center"> 
-<b>Watch the illustrative <a href="inserire">video</a>!</b>
+<b>Watch the illustrative <a href="https://drive.google.com/file/d/1wlWvtBoxLy9juCNtH9oRzPbI2eayQrbS/view?usp=sharing">video</a>!</b>
 </h3>
