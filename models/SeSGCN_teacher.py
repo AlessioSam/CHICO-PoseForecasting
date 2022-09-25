@@ -262,9 +262,10 @@ class Model(nn.Module):
             
         x= x.permute(0,2,1,3) # prepare the input for the Time-Extrapolator-CNN (NCTV->NTCV)
         
-        x=self.prelus[0](self.txcnns[0](x))
-        
-        for i in range(1,self.n_txcnn_layers):
-            x = self.prelus[i](self.txcnns[i](x)) +x # residual connection
+        for i, (prelu, txcnn) in enumerate(zip(self.prelus, self.txcnns)):
+            if i == 0:
+                x = prelu(txcnn(x))
+            else:
+                x = prelu(txcnn(x)) + x
             
         return x
